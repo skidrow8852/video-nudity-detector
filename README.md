@@ -7,7 +7,7 @@ A package for detecting and blurring nudity in videos, that uses @tensorflow/tfj
 ## Installation
 
 ```bash
-npm install nudity-detector
+npm install video-nudity-detector
 ```
 
 # Usage
