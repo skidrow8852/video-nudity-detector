@@ -1,6 +1,8 @@
 # Nudity Detector
-
 A package for detecting and blurring nudity in videos, that uses @tensorflow/tfjs-node for video processing.
+
+![DALL·E 2024-12-23 11 17 36 - A sleek and modern 'nudity-detector' interface displayed on a futuristic screen  The interface shows a digital, high-tech panel with various sensors, ](https://github.com/user-attachments/assets/c08c1202-a833-47a1-bda5-e430f51bd246)
+
 
 ## Installation
 
