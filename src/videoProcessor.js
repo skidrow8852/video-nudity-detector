@@ -5,7 +5,7 @@ const tf = require('@tensorflow/tfjs-node');
 const { processPrediction } = require('./predictionProcessor');
 const { blurVideo } = require('./utils');
 const { loadModel } = require('./modelLoader'); 
-
+const os = require('os');
 /**
  * Detect nudity in a video and optionally blur the detected nudity.
  * @param {string} videoPath - The path to the input video.
@@ -13,6 +13,11 @@ const { loadModel } = require('./modelLoader');
  * @param {boolean} [blur=false] - Whether to blur nudity in the video. Defaults to false.
  * @returns {Promise<boolean>} - Returns true if nudity is detected, otherwise false.
  */
+
+// Set FFmpeg path for Windows
+if (os.platform() === 'win32') {
+  ffmpeg.setFfmpegPath('C:\\ffmpeg\\bin\\ffmpeg.exe');
+}
 
 async function detectNudityInVideo(videoPath, outputPath, blur = false) {
   try {

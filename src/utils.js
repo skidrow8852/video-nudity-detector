@@ -1,4 +1,10 @@
 const ffmpeg = require('fluent-ffmpeg');
+const os = require('os');
+
+// Set FFmpeg path for Windows
+if (os.platform() === 'win32') {
+  ffmpeg.setFfmpegPath('C:\\ffmpeg\\bin\\ffmpeg.exe');
+}
 
 function blurVideo(inputVideo, outputVideo, parts) {
   const [x, y, w, h] = parts;
