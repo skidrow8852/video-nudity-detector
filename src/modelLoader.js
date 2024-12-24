@@ -1,9 +1,10 @@
 const tf = require('@tensorflow/tfjs-node');
+const path = require('path');
 
 let model;
 
 const options = { 
-  modelPath: './model/default-f16/model.json',
+  modelPath: path.join(__dirname, 'src', 'model', 'default-f16', 'model.json'),
 };
 async function loadModel() {
   await tf.ready();
