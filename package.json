@@ -1,6 +1,6 @@
 {
   "name": "video-nudity-detector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package for detecting and blurring nudity in videos.",
   "main": "src/index.js",
   "directories": {
@@ -11,12 +11,26 @@
     "start": "node src/index.js"
   },
   "keywords": [
-    "nudity detecor",
+    "nudity detector",
+    "nudity",
+    "nude",
     "+18 detector",
     "video processing",
     "video analyzer",
-    "video nudity"
-  ],
+    "video nudity",
+    "explicit content detector",
+    "video moderation",
+    "adult content detection",
+    "content filtering",
+    "AI nudity detection",
+    "video AI analysis",
+    "inappropriate content detection",
+    "video classification",
+    "sensitive content filtering",
+    "video scanning",
+    "explicit material detection",
+    "adult video detection"
+    ],
   "author": "Youssef Rais",
   "license": "MIT",
   "dependencies": {
