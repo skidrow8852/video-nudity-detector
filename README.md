@@ -34,7 +34,7 @@ async function main() {
   
   try {
       const videoPath = '/path/to/video.mp4';
-      const outputPath = '/path/to/output_video.mp4';
+      const outputPath = '/path/to/output_video.mp4'; // Optional - if you don't want to blur the video
       const blurVideo = true; // blur the nudity detected on the video 
 
       // Returns a bool (True) if nudity exists or (False) if it doesn't

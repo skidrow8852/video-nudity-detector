@@ -19,14 +19,11 @@ if (os.platform() === 'win32') {
   ffmpeg.setFfmpegPath('C:\\ffmpeg\\bin\\ffmpeg.exe');
 }
 
-async function detectNudityInVideo(videoPath, outputPath, blur = false) {
+async function detectNudityInVideo(videoPath, outputPath='', blur = false) {
   try {
     // Validate input paths
     if (!fs.existsSync(videoPath)) {
       throw new Error(`Input video path does not exist: ${videoPath}`);
-    }
-    if (!fs.existsSync(outputPath)) {
-      throw new Error(`Output path does not exist: ${outputPath}`);
     }
 
     const pipe2jpeg = new Pipe2Jpeg();
@@ -45,6 +42,9 @@ async function detectNudityInVideo(videoPath, outputPath, blur = false) {
         if (prediction.nude) {
           nudityDetected = true;
           if (blur) {
+            if (!fs.existsSync(outputPath)) {
+              throw new Error(`Output path does not exist: ${outputPath}`);
+            }
              blurVideo(videoPath, outputPath, prediction.parts[0].box);
           }
         }
